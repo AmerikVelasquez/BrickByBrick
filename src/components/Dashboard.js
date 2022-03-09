@@ -13,6 +13,7 @@ function Dashboard() {
 
   const confirmLogout = () => {
     logout();
+    navigate("/");
   }
 
   // const startQuiz = () => {
