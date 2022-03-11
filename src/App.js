@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Start from './components/Start';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
