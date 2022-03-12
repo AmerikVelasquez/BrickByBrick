@@ -44,8 +44,8 @@ const Login = () => {
               <Form.Label>password</Form.Label>
               <Form.Control type = "password" ref= {passwordRef}></Form.Control>
             </Form.Group>
-            <Button  onClick={confirmLogin}>Login</Button>
-            <Button  onClick={() => navigate("/SignUp")}> Create Account</Button>
+            <Button variant="danger" onClick={confirmLogin}>Login</Button>
+            <Button variant="danger" onClick={() => navigate("/SignUp")}> Create Account</Button>
           </Form>
         </Card.Body>
      </Card>
