@@ -3,6 +3,7 @@ import { useAuth } from '../AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
+
 const Start = () => {
   const { currentUser } = useAuth()
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ const Start = () => {
   return (
     <React.Fragment>
       <h1>Start</h1>
-    <Button  onClick={() => navigate("/signup")} >Sign Up</Button>
-    <Button  onClick={() => navigate("/login")}>Login</Button>
+    <Button variant="danger" onClick={() => navigate("/signup")} >Sign Up</Button>
+    <Button variant="danger" onClick={() => navigate("/login")}>Login</Button>
     </React.Fragment>
   )
 }
