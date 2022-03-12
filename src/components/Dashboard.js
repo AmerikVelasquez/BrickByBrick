@@ -5,8 +5,9 @@ import { auth, db, logout } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { Button, Card} from 'react-bootstrap';
 import Quiz from './Quiz';
+import Brick from './Navbar';
 
-function Dashboard() {
+const Dashboard = () => {
   const { currentUser , logout} = useAuth();
   const navigate = useNavigate();
   const [quizForm, setQuizForm] = useState(false);
@@ -28,14 +29,15 @@ function Dashboard() {
   }else {
     return (
       <>
-  <h1>Brick By Brick</h1>
+    <Brick />
+    
   <Card>
     <Card.Body>
-    <h1>Email: </h1> {currentUser.email}
+    <h4>Email: </h4> {currentUser.email}
     </Card.Body>
   </Card>
-  <Button onClick = {confirmLogout}>Log out</Button>
-  <Button onClick = {startQuiz}> Begin with quiz</Button>
+  <Button variant="danger" onClick = {confirmLogout}>Log out</Button>
+  <Button variant="danger" onClick = {startQuiz}> Begin with quiz</Button>
   </>
     )
   }
