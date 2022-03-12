@@ -1,5 +1,6 @@
 import React ,{useState} from 'react';
 import {Form, Button, Dropdown, DropdownButton} from "react-bootstrap";
+import Brick from './Navbar';
 
 const Quiz = (props) => {
   const setFormVisible = props.quizControl;
@@ -9,9 +10,12 @@ const Quiz = (props) => {
     setFormVisible(false);
   }
 
+  
+
   return( 
    <>
-   <Form>
+   <Brick />
+   <Form >
      <Form.Group>
      <Form.Label>Question 1. How long is your attention span for a specific project?(approx. hrs)</Form.Label>
      <DropdownButton variant="danger" id="dropdown-basic-button" title="Answer 1">
@@ -48,7 +52,7 @@ const Quiz = (props) => {
       </DropdownButton>
      </Form.Group>
      <br />
-     <Button onClick = {quizFormSubmit}>Finish Quiz</Button>
+     <Button onClick = {quizFormSubmit} variant = "dark">Finish Quiz</Button>
    </Form>
    </>
   )
