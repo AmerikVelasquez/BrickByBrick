@@ -46,6 +46,7 @@ const Signup = () => {
     <>
       <Card>
         <Card.Body>
+          <h2>Sign Up</h2>
           <Form>
             <Form.Group id= "email">
               <Form.Label>email</Form.Label>
@@ -59,8 +60,8 @@ const Signup = () => {
               <Form.Label>password confirm</Form.Label>
               <Form.Control type = "password-confirm" ref= {confirmPasswordRef}></Form.Control>
             </Form.Group>
-            <Button onClick = {confirmSignUp}>Signup</Button>
-            <Button  onClick={() => navigate("/login")}> Already Have An Account?</Button>
+            <Button variant="danger" onClick = {confirmSignUp}>Signup</Button>
+            <Button variant="danger" onClick={() => navigate("/login")}> Already Have An Account?</Button>
           </Form>
         </Card.Body>
      </Card>
