@@ -1,16 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
-import { auth, db, logout } from "./firebase";
-import { query, collection, getDocs, where } from "firebase/firestore";
 import { Button, Card} from 'react-bootstrap';
 import Quiz from './Quiz';
 import Brick from './Navbar';
+// import Masonry from 'react-masonry-css';
+import '../index.css';
+
 
 const Dashboard = () => {
   const { currentUser , logout} = useAuth();
   const navigate = useNavigate();
   const [quizForm, setQuizForm] = useState(false);
+
+  // const breakpointColumnsObj = {
+  //   default: 4,
+  //   1100: 3,
+  //   700: 2,
+  //   500: 1
+  // };
+
+  // <Masonry
+  // breakpointCols={3}
+  // className="my-masonry-grid"
+  // columnClassName="my-masonry-grid_column">
+  // </Masonry>
 
   const confirmLogout = () => {
     logout();
