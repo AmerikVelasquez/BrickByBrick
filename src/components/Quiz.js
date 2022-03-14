@@ -1,5 +1,6 @@
 import React ,{useState} from 'react';
 import {Form, Button, Dropdown, DropdownButton} from "react-bootstrap";
+import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 import Brick from './Navbar';
 // import {getLego} from './Fetch';
 
@@ -29,6 +30,7 @@ const Quiz = (props) => {
           <Dropdown.Item eventKey="1" >1</Dropdown.Item>
           <Dropdown.Item eventKey="2">3</Dropdown.Item>
           <Dropdown.Item eventKey="3">5</Dropdown.Item>
+          <DropdownItem >7</DropdownItem>
           </DropdownButton>
      </Form.Group>
      <br />
